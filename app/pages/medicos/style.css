@@ -1,0 +1,37 @@
+body{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.header{
+    border-radius: 20px;
+    background-color: #92bef777;
+    padding: 1.5em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+h3{
+    font-weight: 600;
+    
+}
+.divmenu{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.divperfil{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+img{
+    width: 13px;
+}
+.main{
+    background-color: #a7e3e38a;
+    border-radius: 20px;
+}
