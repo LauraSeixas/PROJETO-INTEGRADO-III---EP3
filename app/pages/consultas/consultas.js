@@ -45,28 +45,26 @@ for (let i = 0; i < numAppointments; i++) {
 }
 
 
-const ConfirmarReagendar = document.querySelector('.ConfirmarReagendar');
+const ModalCancelar = document.querySelector('.ModalCancelar');
 const ModalReagendar =document.querySelector('.ModalReagendar');
 const btnreschedule = document.querySelectorAll('.btn-reschedule');
 const buttonCancelar =document.querySelector('.buttonCancelar');
 const buttonSair =document.querySelector('.buttonSair');
-const buttonContinuar = document.querySelector('.buttonContinuar');
+const buttonCancelarAgenda = document.querySelector('.buttonCancelarAgenda');
 const buttonConfirmar = document.querySelector('.buttonConfirmar');
-
+const btncancel = document.querySelectorAll(".btn-cancel")
 
 buttonSair.addEventListener("click",function(){
-    ConfirmarReagendar.classList.add("off")
+    ModalCancelar.classList.add("off")
     ModalReagendar.classList.add("off")
 }) 
     
 buttonCancelar.addEventListener("click",function(){
-        ConfirmarReagendar.classList.add("off")
+        ModalCancelar.classList.add("off")
         ModalReagendar.classList.add("off")
  }) 
 
-buttonContinuar.addEventListener("click",function(){
-    ModalReagendar.classList.remove("off")
-})
+
 
 const seta = document.querySelector("#seta")
 
@@ -94,13 +92,24 @@ seta.addEventListener('click', function () {
 const boxappointment = document.querySelectorAll('.box-appointment')
 
 boxappointment.forEach(box =>{
+    
+    btncancel.forEach(cancelar=>{
+        cancelar.addEventListener('click',function(){
+            ModalCancelar.classList.remove("off")
+        })
+    })
     btnreschedule.forEach(reagendar=> {
         reagendar.addEventListener('click',function(){
-            ConfirmarReagendar.classList.remove("off")
+            ModalReagendar.classList.remove("off")
         })
     })
     
     box.addEventListener('click',function(e){
+        buttonCancelarAgenda.addEventListener("click",function(){
+            ModalCancelar.classList.add("off")
+            box.classList.add("removido")
+            
+        })
         let horario =''
         let dia =''
         console.log(box)
@@ -131,7 +140,7 @@ boxappointment.forEach(box =>{
             const timeElement = appointmentDetails.querySelector('.subtitle-detail-appointment:nth-child(3)');
             dateElement.textContent =dia;
             timeElement.textContent= horario;
-            ConfirmarReagendar.classList.add("off")
+            ModalCancelar.classList.add("off")
             ModalReagendar.classList.add("off")
         })
 

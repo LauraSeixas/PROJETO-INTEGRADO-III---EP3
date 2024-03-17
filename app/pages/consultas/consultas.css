@@ -101,7 +101,7 @@
     font-size: 15px;
     cursor: pointer;
 }
-.ConfirmarReagendar{
+.ModalCancelar{
     position: fixed;
     top: 0;
     left: 0;
@@ -161,7 +161,7 @@
  }
 
  
- .buttonContinuar{
+ .buttonCancelarAgenda{
     border: 1px solid #040404;
     cursor: pointer;
     background: #fff;
@@ -227,4 +227,7 @@
 .datas p:hover{
     border-radius: 20px;
     background-color: #A7E3E3;
+}
+.removido{
+    display: none;
 }
