@@ -101,3 +101,130 @@
     font-size: 15px;
     cursor: pointer;
 }
+.ConfirmarReagendar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0000005d;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ModalReagendar{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0000005d;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.off{
+    display: none;
+}
+.Modal{
+    background-color: #fff;
+    border-radius: 20px;
+    width: 70%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Modal h3{
+    margin-bottom: 1em;
+}
+.Modal p{
+    width: 550px;
+    text-align: center;
+    margin-bottom: 2em;
+}
+.buttonsModal{
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+
+ }
+.buttonCancelar{
+    background: #FF725E;
+    border: none;
+    padding: .7em 4em;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+ }
+
+ 
+ .buttonContinuar{
+    border: 1px solid #040404;
+    cursor: pointer;
+    background: #fff;
+    padding: .7em 4em;
+    border-radius: 10px;
+ }
+.buttonSair{
+    background: #FF725E;
+    border: none;
+    padding: .7em 4em;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+ .buttonConfirmar{
+    border: 1px solid #040404;
+    cursor: pointer;
+    background: #fff;
+    padding: .7em 4em;
+    border-radius: 10px;
+ }
+ .slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    background-color: #a7e3e346;
+    border-radius: 20px;
+    margin-bottom: 2em;
+ }
+.agendar{
+    width: 80%;
+    padding: 2em;
+   
+    
+    
+}
+
+ .datas{
+    
+    display: flex;
+    gap: 5em;
+    overflow-x: hidden;
+    white-space: nowrap;
+    
+}
+.datas div{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.datas h5{
+    text-align: center;
+}
+.datas p{
+    padding: 0 5px;
+    width: 100%;
+    
+}
+.datas p:hover{
+    border-radius: 20px;
+    background-color: #A7E3E3;
+}
