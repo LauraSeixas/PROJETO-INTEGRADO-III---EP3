@@ -4,15 +4,15 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 650px;
     overflow-y: auto; 
     overflow-x: hidden; 
     scrollbar-color: #FFFFFF transparent; 
 }
-
 .title-appointment-page{
-    margin-bottom: 28px;
+    margin-bottom: 35px;
     font-size: 26px;
+    margin-top: 10px;
 }
 #appointments-container{
     display: flex;
@@ -28,7 +28,7 @@
     align-items: center;
     background-color: #FFFFFF;
     width: 100%;
-    margin-bottom: 55px;
+    margin-bottom: 65px;
 }
 .container-my-appointments{
     display: flex;

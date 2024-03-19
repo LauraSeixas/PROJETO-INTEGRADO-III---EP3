@@ -4,5 +4,5 @@ function toggleDropdown() {
 
     const arrowIcon = document.getElementById("arrowIcon");
     dropdownContent.classList.toggle("show-dropdown");
-    arrowIcon.src = dropdownContent.classList.contains("show-dropdown") ? "/app/assets/arrow-up.svg" : "/app/assets/setadown.png";
+    arrowIcon.src = dropdownContent.classList.contains("show-dropdown") ? "/public/assets/arrow-up.svg" : "/public/assets/setadown.png";
 }
