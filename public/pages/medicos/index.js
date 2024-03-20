@@ -3,177 +3,67 @@ const Medicos = [
       "id": "1c497186-be9c-4b1d-b055-bcf0110cd7f4",
       "name": "Fulana das Oliveiras",
       "medical_specialty": "Psiquiatra",
-      "address": "Avenida República do Líbano 251, Recife",
-      "appointments": [
-        {
-          "date": "2024-03-21",
-          "times": ["08:00", "10:00", "14:00"]
-        },
-        {
-          "date": "2024-03-22",
-          "times": ["09:00", "11:00", "15:00"]
-        }
-      ]
+      "address": "Avenida República do Líbano 251, Recife"
     },
     {
       "id": "d336a9bb-6052-44ad-a1b8-5f279419c900",
       "name": "Beltrana das Flores",
       "medical_specialty": "Psiquiatra",
-      "address": "Rua das Flores, 123, São Paulo",
-      "appointments": [
-        {
-          "date": "2024-03-21",
-          "times": ["08:00", "10:00", "14:00"]
-        },
-        {
-          "date": "2024-03-22",
-          "times": ["09:00", "11:00", "15:00"]
-        }
-      ]
+      "address": "Rua das Flores, 123, São Paulo"
     },
     {
       "id": "e70aa0c9-3ecb-4a38-8241-d0d80ff84f11",
       "name": "Sicrana das Palmeiras",
       "medical_specialty": "Psiquiatra",
-      "address": "Avenida das Palmeiras, 456, Rio de Janeiro",
-      "appointments": [
-        {
-          "date": "2024-03-21",
-          "times": ["08:00", "10:00", "14:00"]
-        },
-        {
-          "date": "2024-03-22",
-          "times": ["09:00", "11:00", "15:00"]
-        }
-      ]
+      "address": "Avenida das Palmeiras, 456, Rio de Janeiro"
     },
     {
       "id": "d7c41a57-4a46-4fc5-91f5-313eeff362fe",
       "name": "Fulano dos Pinheiros",
       "medical_specialty": "Psiquiatra",
-      "address": "Rua dos Pinheiros, 789, Belo Horizonte",
-      "appointments": [
-        {
-          "date": "2024-03-21",
-          "times": ["08:00", "10:00", "14:00"]
-        },
-        {
-          "date": "2024-03-22",
-          "times": ["09:00", "11:00", "15:00"]
-        }
-      ]
+      "address": "Rua dos Pinheiros, 789, Belo Horizonte"
     },
     {
       "id": "3f490cde-723d-45f9-a87b-4f3539dab373",
       "name": "Beltrano dos Coqueiros",
       "medical_specialty": "Psiquiatra",
-      "address": "Avenida Central, 101, Brasília",
-      "appointments": [
-        {
-          "date": "2024-03-21",
-          "times": ["08:00", "10:00", "14:00"]
-        },
-        {
-          "date": "2024-03-22",
-          "times": ["09:00", "11:00", "15:00"]
-        }
-      ]
+      "address": "Avenida Central, 101, Brasília"
     },
     {
       "id": "6b184d8e-f914-4b69-bb72-c75cd1b4e335",
       "name": "Sicrano dos Ipês",
       "medical_specialty": "Psiquiatra",
-      "address": "Rua das Gaivotas, 567, Florianópolis",
-      "appointments": [
-        {
-          "date": "2024-03-21",
-          "times": ["08:00", "10:00", "14:00"]
-        },
-        {
-          "date": "2024-03-22",
-          "times": ["09:00", "11:00", "15:00"]
-        }
-      ]
+      "address": "Rua das Gaivotas, 567, Florianópolis"
     },
     {
       "id": "00f3eeac-c0b2-4b51-a374-7e8d7c07bcd8",
       "name": "Fulana dos Girassóis",
       "medical_specialty": "Psiquiatra",
-      "address": "Avenida dos Girassóis, 321, Salvador",
-      "appointments": [
-        {
-          "date": "2024-03-21",
-          "times": ["08:00", "10:00", "14:00"]
-        },
-        {
-          "date": "2024-03-22",
-          "times": ["09:00", "11:00", "15:00"]
-        }
-      ]
+      "address": "Avenida dos Girassóis, 321, Salvador"
     },
     {
       "id": "47f833ce-79d9-44a3-a6c3-bc7a4469ba54",
       "name": "Beltrana das Margaridas",
       "medical_specialty": "Psiquiatra",
-      "address": "Rua das Mangueiras, 654, Porto Alegre",
-      "appointments": [
-        {
-          "date": "2024-03-21",
-          "times": ["08:00", "10:00", "14:00"]
-        },
-        {
-          "date": "2024-03-22",
-          "times": ["09:00", "11:00", "15:00"]
-        }
-      ]
+      "address": "Rua das Mangueiras, 654, Porto Alegre"
     },
     {
       "id": "160efd96-10c8-41e6-b978-e96f7511b9dc",
       "name": "Sicrana das Orquídeas",
       "medical_specialty": "Psiquiatra",
-      "address": "Avenida das Flores, 987, Goiânia",
-      "appointments": [
-        {
-          "date": "2024-03-21",
-          "times": ["08:00", "10:00", "14:00"]
-        },
-        {
-          "date": "2024-03-22",
-          "times": ["09:00", "11:00", "15:00"]
-        }
-      ]
+      "address": "Avenida das Flores, 987, Goiânia"
     },
     {
       "id": "0e414416-4d09-42e8-a68d-99f88cd3cc05",
       "name": "Fulano dos Lírios",
       "medical_specialty": "Psiquiatra",
-      "address": "Rua dos Ipês, 741, Manaus",
-      "appointments": [
-        {
-          "date": "2024-03-21",
-          "times": ["08:00", "10:00", "14:00"]
-        },
-        {
-          "date": "2024-03-22",
-          "times": ["09:00", "11:00", "15:00"]
-        }
-      ]
+      "address": "Rua dos Ipês, 741, Manaus"
     },
     {
       "id": "1349155c-3dbd-44f2-98a7-666b089615b0",
       "name": "Beltrano das Acácias",
       "medical_specialty": "Psiquiatra",
-      "address": "Avenida das Acácias, 852, Curitiba",
-      "appointments": [
-        {
-          "date": "2024-03-21",
-          "times": ["08:00", "10:00", "14:00"]
-        },
-        {
-          "date": "2024-03-22",
-          "times": ["09:00", "11:00", "15:00"]
-        }
-      ]
+      "address": "Avenida das Acácias, 852, Curitiba"
     }
   ]
 
@@ -310,10 +200,8 @@ cartas.forEach(carta => carta.addEventListener('click', function(e) {
     if (e.target.tagName === 'P' && e.target.textContent !== '----') {
         modalAgendar.classList.remove('off');
 
-        // Obtém o texto do elemento <p> clicado (horário)
         const horario = e.target.textContent;
 
-        // Obtém o dia correspondente ao elemento <p> clicado (h5)
         const dia = e.target.parentNode.querySelector('h5').textContent;
         console.log('Dia selecionado:', dia);
         console.log('Horário selecionado:', horario);
@@ -364,50 +252,4 @@ buttonConfirmar.addEventListener('click', function() {
   sendData(dataToBeSent);
 });
 
-function sendData(dataToBeSent) {
-  let name = dataToBeSent.name;
-  let medical_specialty = dataToBeSent.medical_specialty
-  let address = dataToBeSent.address;
-  let appointment = dataToBeSent.appointment;
-
-  try {
-      if (dataToBeSent.name !== "" && dataToBeSent.medical_specialty !== "") {
-      const data = {
-        name,
-        medical_specialty,
-        address,
-        appointment
-      };
-  
-      const options = {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: {
-              'Content-Type': 'application/json'
-          }
-      };
-      console.log('options', options);
-      fetch('/api', options)
-          .then(res => {
-            if (!res.ok) {
-              throw new Error('Network response was not ok');
-            }
-            return res.json();
-          })
-          .then(data => {
-              console.log(data);
-              location.reload();
-              console.log('Dados enviados com sucesso!');
-              alert('Dados enviados com sucesso!');
-              console.log(location.reload());
-          }
-          )
-          .catch(err => {
-            console.error('Erro ao processar a requisição:', err);
-          });
-      }
-  } catch (error) {
-      console.log('Erro ao enviar os dados: ' + error);
-      throw new Error('Erro ao enviar os dados: ' + error.message);
-  }
-};
+function sendData(dataToBeSent) {};

@@ -22,5 +22,13 @@
     "address": "Avenida das Acácias, 852, Curitiba",
     "deleted": false,
     "appointment": "Quinta - 21 de março às 10:00 da manhã"
+  },
+  {
+    "id": "de0b7095-8fcf-451e-bbd6-f44ca3461f30",
+    "name": "Fulana das Oliveiras",
+    "medical_specialty": "Psiquiatra",
+    "address": "Avenida República do Líbano 251, Recife",
+    "deleted": false,
+    "appointment": "Quarta - 20 de março às 08:00 da manhã"
   }
 ]
