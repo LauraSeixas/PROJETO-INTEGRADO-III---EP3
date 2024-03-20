@@ -4,15 +4,14 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
-    height: 650px;
+    height: 690px;
     overflow-y: auto; 
     overflow-x: hidden; 
     scrollbar-color: #FFFFFF transparent; 
 }
 .title-appointment-page{
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     font-size: 26px;
-    margin-top: 10px;
 }
 #appointments-container{
     display: flex;
@@ -22,13 +21,16 @@
 }
 .box-appointment{
     border-radius: 8px;
-    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: #FFFFFF;
     width: 100%;
-    margin-bottom: 65px;
+    margin-bottom: 40px;
 }
 .container-my-appointments{
     display: flex;
