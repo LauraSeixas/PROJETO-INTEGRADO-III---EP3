@@ -1,31 +1,48 @@
+let numAppointments = [];
 
-function createAppointmentHTML(i, date, time) {
+async function getData() {
+    try {
+        const response = await fetch('http://localhost:3000/api');
+
+        const data = await response.json();
+
+        numAppointments = Object.values(data);
+        console.log(numAppointments)
+        createAppointmentsHTML();
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+getData();
+
+function createAppointmentHTML(i, appointments) {
+    const { name, medical_specialty, address, appointment } = appointments;
     return `
     <div class="box-appointment" key=${i}>
         <div class="container-my-appointments">
-            <img src="/app/assets/perfil.svg" alt="mental-health" style="margin-right: 25px;">
+            <img src="/public/assets/perfil.svg" alt="mental-health" style="margin-right: 25px;">
             <div>
-                <p class="title-appointment">Dra. Fulana Beltrana</p>
-                <p class="subtitle-appointment-specialty">Psiquiatra</p>
+                <p class="title-appointment">${name}</p>
+                <p class="subtitle-appointment-specialty">${medical_specialty}</p>
                 <div class="stars">
-                    <img src="/app/assets/colored-star.svg" alt="star"/>
-                    <img src="/app/assets/colored-star.svg" alt="star"/>
-                    <img src="/app/assets/colored-star.svg" alt="star"/>
-                    <img src="/app/assets/colored-star.svg" alt="star"/>
-                    <img src="/app/assets/gray-star.svg" alt="star"/>
+                    <img src="/public/assets/colored-star.svg" alt="star"/>
+                    <img src="/public/assets/colored-star.svg" alt="star"/>
+                    <img src="/public/assets/colored-star.svg" alt="star"/>
+                    <img src="/public/assets/colored-star.svg" alt="star"/>
+                    <img src="/public/assets/gray-star.svg" alt="star"/>
                 </div>
                 <p class="subtitle-appointment-adress">Endereço</p>
                 <hr class="divider">
                 <p class="subtitle-appointment-full-adress">
-                    <img src="/app/assets/point-marker.svg"/>
-                    Avenida República do Líbano 251, Recife</p>
+                    <img src="/public/assets/point-marker.svg"/>
+                    ${address}</p>
             </div>
         </div>
         <div class="divider-between-containers"></div>
         <div class="container-detail-appointments">
             <p class="title-detail-appointment">Detalhes da <strong style="font-weight: 500;">consulta</strong></p>
-            <p class="subtitle-detail-appointment">${date ? date : '29 de Dezembro de 2023'}</p>
-            <p class="subtitle-detail-appointment">${time ? time: '10:00, Sexta-feira'}</p>
+            <p class="subtitle-detail-appointment">${appointment}</p>
             <div class="btn-container">
                 <button class="btn-cancel">Cancelar a consulta</button>
                 <button class="btn-reschedule">Reagendar a consulta</button>
@@ -36,12 +53,14 @@ function createAppointmentHTML(i, date, time) {
     `;
 }
 
-const appointmentsContainer = document.getElementById('appointments-container');
-
-let numAppointments = 4; 
-
-for (let i = 0; i < numAppointments; i++) {
-    appointmentsContainer.innerHTML += createAppointmentHTML(i);
+function createAppointmentsHTML() {
+    const appointmentsContainer = document.getElementById('appointments-container');
+    appointmentsContainer.innerHTML = ''; 
+    
+    numAppointments.forEach((appointments, i) => {
+        const appointmentHTML = createAppointmentHTML(i, appointments);
+        appointmentsContainer.innerHTML += appointmentHTML;
+    });
 }
 
 
