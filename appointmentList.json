@@ -1,0 +1,34 @@
+[
+  {
+    "id": "2ee5fecc-eae6-4b46-bc67-b8975d1f8108",
+    "name": "Sicrana das Palmeiras",
+    "medical_specialty": "Psiquiatra",
+    "address": "Avenida das Palmeiras, 456, Rio de Janeiro",
+    "appointment": "Quarta - 20 de março às 10:00 da manhã",
+    "deleted": true
+  },
+  {
+    "id": "88d88d56-3d39-490c-802d-871750fc2723",
+    "name": "Fulana dos Girassóis",
+    "medical_specialty": "Psiquiatra",
+    "address": "Avenida dos Girassóis, 321, Salvador",
+    "deleted": true,
+    "appointment": "testando PUT"
+  },
+  {
+    "id": "233e8f2a-86cd-4e10-9aa2-fb3d9ea1773a",
+    "name": "Beltrano das Acácias",
+    "medical_specialty": "Psiquiatra",
+    "address": "Avenida das Acácias, 852, Curitiba",
+    "deleted": false,
+    "appointment": "Quinta - 21 de março às 10:00 da manhã"
+  },
+  {
+    "id": "de0b7095-8fcf-451e-bbd6-f44ca3461f30",
+    "name": "Fulana das Oliveiras",
+    "medical_specialty": "Psiquiatra",
+    "address": "Avenida República do Líbano 251, Recife",
+    "deleted": false,
+    "appointment": "Quarta - 20 de março às 08:00 da manhã"
+  }
+]
