@@ -1,0 +1,77 @@
+.header{
+  display: flex;
+  justify-content: center;
+}
+.main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5em;
+}
+
+.main h2{
+  font-weight: 500;
+  width: 40%;
+}
+.forms{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 1em;
+}
+.Textarea{
+  display: flex;
+  flex-direction: column;
+  margin: 1px;
+}
+
+.input{
+padding: 6px;
+border-radius: 10px;
+}
+.submitForms{
+  background-color: #C8DEFB;
+  border: none;
+  padding: .5em ;
+  border-radius: 10px;
+  box-shadow: 0 4px 5px #0000007a;
+  cursor: pointer;
+}
+.divisao {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  gap: 2em;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.linha {
+
+  width: 50%; /* Ajuste a largura do traço conforme necessário */
+  height: 1px; /* Ajuste a altura do traço conforme necessário */
+  background-color: rgba(56, 56, 56, 0.63); /* Cor do traço */
+}
+.DivButtons{
+  margin-top: 2em;
+  width: 40%;
+  gap: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonCadastro{
+  border: none;
+  background-color: #FFFFFF;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: .5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  cursor: pointer;
+}
