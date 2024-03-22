@@ -4,7 +4,7 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
-    height: 690px;
+    height: 790px;
     overflow-y: auto; 
     overflow-x: hidden; 
     scrollbar-color: #FFFFFF transparent; 
@@ -21,8 +21,8 @@
 }
 .box-appointment{
     border-radius: 8px;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-left: 2em;
     padding-right: 2em;
     display: flex;
@@ -42,6 +42,7 @@
     display: flex;
     flex-direction: column;
     width: 45%;
+    padding-top: 1em;
 }
 .title-appointment{
     font-size: 16px;
@@ -63,8 +64,9 @@
 }
 .title-detail-appointment{
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 0.3em;
+    margin-top: -10px;
 }
 .subtitle-detail-appointment{
     font-size: 15px;
@@ -82,7 +84,7 @@
     margin-right: 50px;
 }
 .btn-container{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .btn-cancel{
     background-color: transparent;
@@ -147,19 +149,35 @@
     text-align: center;
     margin-bottom: 2em;
 }
+
+.titleAppointmentModal{
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 4em;
+}
+
+.subtitleAppointmentModal{
+    font-size: 15px;
+    font-weight: 400;
+}
+
 .buttonsModal{
     display: flex;
     width: 35%;
-    justify-content: space-between;
-
+    justify-content: space-around;
+    margin-bottom: 4em;
+    margin-top: 1em;
  }
+
 .buttonCancelar{
     background: #FF725E;
     border: none;
-    padding: .7em 4em;
+    padding: 0.4em 3.5em;
     border-radius: 10px;
     cursor: pointer;
     color: #fff;
+    font-size: 20px;
+    font-weight: 500;
  }
 
  
@@ -167,23 +185,30 @@
     border: 1px solid #040404;
     cursor: pointer;
     background: #fff;
-    padding: .7em 4em;
+    padding: 0.4em 3.5em;
     border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
  }
+
 .buttonSair{
     background: #FF725E;
     border: none;
-    padding: .7em 4em;
+    padding: 0.4em 3em;
     border-radius: 10px;
     cursor: pointer;
     color: #fff;
+    font-size: 20px;
+    font-weight: 500;
 }
  .buttonConfirmar{
     border: 1px solid #040404;
     cursor: pointer;
     background: #fff;
-    padding: .7em 4em;
+    padding: 0.4em 3em;
     border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
  }
  .slide{
     display: flex;
@@ -232,4 +257,8 @@
 }
 .removido{
     display: none;
+}
+.iconClose{
+    align-self: flex-end;
+    cursor: pointer;
 }

@@ -71,7 +71,7 @@ const main = document.querySelector('.main')
 
 
 function renderDates(medico) {
-    const daysOfWeek = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+    const daysOfWeek = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
     const currentDate = new Date();
    
     // Encontra a div de datas específica para este médico
@@ -138,7 +138,7 @@ function createAppointmentHTML(medico) {
             </div>
             <div class="divider-between-containers"></div>
             <div class="container-detail-doctors">
-            <p class="title-detail-doctor">Escolha uma <strong style="font-weight: 500;">data e horário</strong></p>
+            <p class="title-detail-doctor">Escolha uma <strong style="font-weight: 600;">data e horário</strong></p>
                 <div class="agendar">
                     <div class="datas">
                     </div>
@@ -202,8 +202,8 @@ cartas.forEach(carta => carta.addEventListener('click', function(e) {
 
         const horario = e.target.textContent;
 
-        const dia = e.target.parentNode.querySelector('h5').textContent;
-        console.log('Dia selecionado:', dia);
+        const diaCompleto = e.target.parentNode.querySelector('h5').textContent;
+        console.log('diaCompleto selecionado:', diaCompleto);
         console.log('Horário selecionado:', horario);
 
         const key = carta.getAttribute('key');
@@ -215,10 +215,16 @@ cartas.forEach(carta => carta.addEventListener('click', function(e) {
 
             const EspecialidadeMedico = dataPerfil.querySelector('p');
             EspecialidadeMedico.textContent = Medico.medical_specialty;
-
+            const data = new Date(); 
             const mes = new Date().toLocaleString('default', { month: 'long' });
-      
-            const textoFinal = `${dia.split('/')[0]} de ${mes} às ${horario} da manhã`;
+            const ano = data.getFullYear();
+
+            const textoFinal = `${diaCompleto.split('/')[0]} de ${mes} às ${horario} da manhã`;
+
+            const dia = diaCompleto.split(' - ')[1].split('/')[0];
+            const diaDaSemana = diaCompleto.split(' - ')[0];
+            const appointmentTextFirstPart = `${dia} de ${mes} de ${ano}`;
+            const appointmentTextSecondPart = `${horario}, ${diaDaSemana}`
 
             const paragrafo = dataAgendamento.querySelector('p');
             paragrafo.textContent = textoFinal;
@@ -230,7 +236,10 @@ cartas.forEach(carta => carta.addEventListener('click', function(e) {
               name: Medico.name,
               medical_specialty: Medico.medical_specialty,
               address: Medico.address,
-              appointment: textoFinal
+              appointment: {
+                data: appointmentTextFirstPart, 
+                time: appointmentTextSecondPart
+              }
           };
         } else {
             console.error('Médico não encontrado');

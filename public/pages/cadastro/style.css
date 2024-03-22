@@ -38,6 +38,10 @@ border-radius: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 5px #0000007a;
   cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .divisao {
   margin-top: 2em;

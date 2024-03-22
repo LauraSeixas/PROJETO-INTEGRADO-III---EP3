@@ -4,15 +4,15 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
-    height: 690px;
+    height: 790px;
     overflow-y: auto; 
     overflow-x: hidden; 
     scrollbar-color: #FFFFFF transparent; 
 }
 .box-doctor{
     border-radius: 8px;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-left: 2em;
     padding-right: 2em;
     display: flex;
@@ -31,10 +31,9 @@
 .container-detail-doctors{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
 }
 .title-doctor-page{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 26px;
 }
 .title-doctor{
@@ -57,8 +56,9 @@
 }
 .title-detail-doctor{
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 0.5em;
+    margin-top: -10px;
 }
 .subtitle-detail-doctor{
     font-size: 15px;
