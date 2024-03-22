@@ -1,12 +1,11 @@
 .home{
     background-color:  #a7e3e38a;
     border-radius: 20px;
-    padding: 2em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    height: 380px;
+    height: auto;
 }
 .title-home-page{
     margin-bottom: 0.8em;
