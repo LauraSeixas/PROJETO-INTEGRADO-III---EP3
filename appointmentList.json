@@ -4,8 +4,11 @@
     "name": "Sicrana das Palmeiras",
     "medical_specialty": "Psiquiatra",
     "address": "Avenida das Palmeiras, 456, Rio de Janeiro",
-    "appointment": "Quarta - 20 de março às 10:00 da manhã",
-    "deleted": false
+    "appointment": {
+      "data": "20 de março de 2024",
+      "time": "10:00, Quarta-feira"
+    },
+    "deleted": true
   },
   {
     "id": "88d88d56-3d39-490c-802d-871750fc2723",
@@ -13,7 +16,10 @@
     "medical_specialty": "Psiquiatra",
     "address": "Avenida dos Girassóis, 321, Salvador",
     "deleted": false,
-    "appointment": "testando PUT"
+    "appointment": {
+      "data": "22 de março de 2024",
+      "time": "08:00, Sexta-feira"
+    }
   },
   {
     "id": "233e8f2a-86cd-4e10-9aa2-fb3d9ea1773a",
