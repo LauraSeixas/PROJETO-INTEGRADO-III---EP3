@@ -4,7 +4,7 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
-    height: 790px;
+    height: 600px;
     overflow-y: auto; 
     overflow-x: hidden; 
     scrollbar-color: #FFFFFF transparent; 
@@ -14,26 +14,28 @@
     padding-top: 2em;
     padding-bottom: 2em;
     padding-left: 2em;
-    padding-right: 2em;
+    padding-right: 1em;
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: #FFFFFF;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 .container-my-doctors{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 50%;
+    width: 45%;
 }
 .container-detail-doctors{
     display: flex;
     flex-direction: column;
+    width: 49%;
 }
 .title-doctor-page{
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    margin-top: 8px;
     font-size: 26px;
 }
 .title-doctor{
@@ -77,29 +79,29 @@
 .divider-between-containers {
     border: 1px solid #D9D9D9;
     height: 100%;
-    margin-right: 50px;
+    margin-right: 30px;
 }
 .datas{
     display: flex;
-    gap: 2em;
+    gap: 1.5em;
     overflow-x: hidden;
     white-space: nowrap;
     align-items: center;
-    justify-content: center;
+    width: 100%;
 }
 span{
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 12px;
 }
 .fusoBSB{
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 0.5em;
+    margin-top: 0.2em;
 }
 /* Para navegadores baseados no Chromium (Chrome, Edge) */
 .datas p:hover{
     border-radius: 10px;
-    background-color: #A7E3E3;
+    background-color: rgba(167, 227, 227, 0.5);
     padding: 0.5em 0.5em;
 }
 .date-item{
@@ -108,17 +110,18 @@ span{
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size: 14px;
 }	
 .agendar{
     display: flex;
     flex-direction: row;
-    padding: 0 0 0 2em;
+    padding: 0;
 }
 .seta {
     width: 20px;
     height: 20px; 
     cursor: pointer; 
-    margin-left: 15px;
+    margin-left: 10px;
 }
 .button{
     width: 100%;
@@ -149,7 +152,7 @@ span{
     align-items: center;
 }
 .titleAppointmentModal{
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 0.2em;
 }
@@ -160,8 +163,11 @@ span{
     background-color: #fff;
     border-radius: 20px;
     width: 60vw;
-    height: 66vh;
-    padding: 2em;
+    height: 75vh;
+    padding-top: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -178,8 +184,9 @@ span{
     align-self: center;
 }
 .calendario{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
+    margin-top: -10px;
 }
 .titlemodal{
     text-align: center;
@@ -194,39 +201,46 @@ span{
     display: flex;
     flex-direction: column;
 }
+
 .dataAgendamento p{
    font-size: 14px;
 }
+
 .containerInfosAgendamento{
     display: flex;
     flex-direction: row;
     justify-content: left;
     align-items: start;
 }
+
 .containerInfosAgendamento p{
     font-size: 14px;
 }
+
 .dataEnderecamento{
     display: flex;
     align-items: center;
     gap: .5em;
     width: 400px;
 }
+
 .dataEnderecamento p{
     font-size: 13px;
  }
+
  .doutoraModal{
     margin-bottom: .5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
  }
+
  .buttonsModal{
     display: flex;
-    width: 36%;
-    justify-content: space-between;
-
+    width: 43%;
+    justify-content: space-around;
  }
+
  .buttonConfirmar{
     background: #FF725E;
     border: none;
@@ -251,4 +265,20 @@ span{
 .iconClose{
     align-self: flex-end;
     cursor: pointer;
+    margin-top: -20px;
+}
+.appointmentDayText{
+    font-size: 11px;
+    font-weight: 400;
+}
+.appointmentDay{
+    font-size: 13px;
+    font-weight: 600;
+}
+.appointmentTime{
+    font-size: 12px;
+    font-weight: 400;
+}
+.marginTime{
+    margin-top: 5px;
 }

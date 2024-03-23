@@ -34,6 +34,7 @@
             <div id="appointments-container" class="container-appointment"></div>
         </div>
     </main>
+
     <div class="ModalCancelar off">
         <div class="Modal">
             <img src="/public/assets/x.svg" alt="close" class="iconClose"/>
@@ -46,51 +47,21 @@
             </div>
         </div>
     </div>
+
     <div class="ModalReagendar off">
-        <div class="Modal">
+        <div class="ModalReagendamento">
+            <img src="/public/assets/x.svg" alt="close" class="iconCloseReagendar"/>
             <img src="/public/assets/calendario.png" alt="calendario" class="calendario"/>
             
-                <h4>Tem certeza que pretende reagendar essa consulta?</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                    dolor sit amet, consectetur adipiscing elit</p>
+                <h4 class="titleAppointmentModalReagendar">Tem certeza que pretende reagendar essa consulta?</h4>
+                <span class="subtitleAppointmentModal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+                    dolor sit amet, consectetur adipiscing elit</span>
                 <div class="slide">
                 <div class="agendar">
-                        <h3>Escolha uma nova data e horário</h3>
-                        <div class="datas">
-                        <div >
-                             <h5>hoje</h5>
-                             <p>8:00</p>
-                             <p>10:00</p>
-                        </div>
-                        <div>
-                            <h5>Amanhã</h5>
-                            <p>8:00</p>
-                            <p>10:00</p>
-                       </div>
-                        <div>
-                            <h5>Quarta</h5>
-                            <p>8:00</p>
-                            <p>10:00</p>
-                        </div>
-                        <div>
-                            <h5>Quinta</h5>
-                            <p>----</p>
-                            <p>----</p>
-                        </div>
-                        <div>
-                            <h5>Sexta</h5>
-                            <p>8:00</p>
-                            <p>10:00</p>
-                        </div>
-                        <div>
-                            <h5>Sabado</h5>
-                            <p>8:00</p>
-                            <p>10:00</p>
-                        </div>
-                    </div>
-                   
+                        <h3 class="title-detail-appointment">Escolha uma nova data e horário</h3>
+                        <div class="datasReagendamento"></div>
                 </div>
-                <img src="/public/assets/setaRight.png" alt="seta" id="seta"/>
+                <div id="seta"></div>
             </div>
                     
             <div class="buttonsModal">

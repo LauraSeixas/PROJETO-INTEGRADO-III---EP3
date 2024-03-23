@@ -81,23 +81,24 @@ function renderDates(medico) {
         return;
     }
    
-    // Renderiza 15 dias
-    for (let i = 0; i < 15; i++) {
+    // Renderiza 6 dias
+    for (let i = 0; i < 6; i++) {
         const date = new Date();
         date.setDate(currentDate.getDate() + i);
        
         const day = daysOfWeek[date.getDay()];
         const dayOfMonth = date.getDate();
-        const month = date.getMonth() + 1;
+        const fullMonthName = new Date().toLocaleString('default', { month: 'long' });
+        const month = fullMonthName.replace(/^\w/, (c) => c.toUpperCase());
         const year = date.getFullYear();
        
         const div = document.createElement('div');
         div.classList.add('date-item');
-        div.style.display = i < 5 ? 'block' : 'none'; // Mostra apenas os primeiros 5 dias
         div.innerHTML = `
-            <h5>${day} - <span>${dayOfMonth}/${month}<span></h5>
-            <p>8:00</p>
-            <p>10:00</p>
+            <h5 class="appointmentDay">${day}</h5>
+            <span class="appointmentDayText">${dayOfMonth} de ${month}<span>
+            <p class="appointmentTime marginTime">8:00</p>
+            <p class="appointmentTime">10:00</p>
         `;
        
         datasContainer.appendChild(div);
@@ -150,43 +151,40 @@ function createAppointmentHTML(medico) {
     </div>
 `;
 }
-/* <div class="button">
-<button>Agende Agora</button>
-</div> */
 
 const div1 = document.createElement('div')
 
-
-// const setas = document.querySelectorAll(".seta");
-// setas.forEach(seta=> {
+const setas = document.querySelectorAll(".seta");
+setas.forEach(seta=> {
    
-//     seta.addEventListener('click', function(){
-//         const datasContainer = this.parentElement.querySelector('.datas');
+    seta.addEventListener('click', function(){
+        const datasContainer = this.parentElement.querySelector('.datas');
         
-//         const ultimoDia = datasContainer.querySelector('div:last-child');
-//         // Calcula a posição do último dia em relação à div de datas
-//         var posicaoUltimoDia = ultimoDia.offsetLeft;
+        const ultimoDia = datasContainer.querySelector('div:last-child');
+        // Calcula a posição do último dia em relação à div de datas
+        var posicaoUltimoDia = ultimoDia.offsetLeft;
     
-//         // Rola a div de datas até a posição do último dia
-//         if(this.classList.contains("um")){
-//             datasContainer.scrollTo({
-//                 left: 0,
-//                 behavior: 'smooth' // Adiciona uma rolagem suave
-//             });
-//             this.classList.remove("um")
-//         }else{
-//             datasContainer.scrollTo({
-//                 left: posicaoUltimoDia,
-//                 behavior: 'smooth' // Adiciona uma rolagem suave
-//             });
-//             this.classList.add("um")
-//         }
+        // Rola a div de datas até a posição do último dia
+        if(this.classList.contains("um")){
+            datasContainer.scrollTo({
+                left: 0,
+                behavior: 'smooth' // Adiciona uma rolagem suave
+            });
+            this.classList.remove("um")
+        }else{
+            datasContainer.scrollTo({
+                left: posicaoUltimoDia,
+                behavior: 'smooth' // Adiciona uma rolagem suave
+            });
+            this.classList.add("um")
+        }
        
-//     })
-// })
+    })
+})
 
 let dia='';
 let horario ='';
+let diaMes =''
 const modalAgendar = document.querySelector('.modalAgendar')
 const dataAgendamento = document.querySelector('.dataAgendamento')
 const buttonCancelar = document.querySelector('.buttonCancelar')
@@ -202,10 +200,16 @@ cartas.forEach(carta => carta.addEventListener('click', function(e) {
 
         const horario = e.target.textContent;
 
-        const diaCompleto = e.target.parentNode.querySelector('h5').textContent;
-        console.log('diaCompleto selecionado:', diaCompleto);
-        console.log('Horário selecionado:', horario);
-
+        const container = e.target.closest('.date-item');
+        dia = container.querySelector('.appointmentDay').textContent;
+        diaMes = container.querySelector('.appointmentDayText').textContent;
+        const diaMesText = diaMes.trim(); // Remover espaços em branco extras
+        const partes = diaMesText.split(' '); // Dividir a string em partes com base no espaço em branco
+        const date = new Date();
+        const year = date.getFullYear();
+        const diaMesFinal = partes[0] + ' ' + partes[1] + ' ' + partes[2] + ' de ' + year; // Pegar apenas o dia e o mês
+        const timeDay = horario + ', ' +  dia;
+        
         const key = carta.getAttribute('key');
         const Medico = Medicos.find(medico => medico.id == key);
 
@@ -215,18 +219,10 @@ cartas.forEach(carta => carta.addEventListener('click', function(e) {
 
             const EspecialidadeMedico = dataPerfil.querySelector('p');
             EspecialidadeMedico.textContent = Medico.medical_specialty;
-            const data = new Date(); 
-            const mes = new Date().toLocaleString('default', { month: 'long' });
-            const ano = data.getFullYear();
+     
+            const textoFinal = `${diaMesFinal} às ${horario} da manhã`;
 
-            const textoFinal = `${diaCompleto.split('/')[0]} de ${mes} às ${horario} da manhã`;
-
-            const dia = diaCompleto.split(' - ')[1].split('/')[0];
-            const diaDaSemana = diaCompleto.split(' - ')[0];
-            const appointmentTextFirstPart = `${dia} de ${mes} de ${ano}`;
-            const appointmentTextSecondPart = `${horario}, ${diaDaSemana}`
-
-            const paragrafo = dataAgendamento.querySelector('p');
+            const paragrafo = dataAgendamento.querySelector('.dataAgendamento p');
             paragrafo.textContent = textoFinal;
 
             const endereco = document.querySelector('.dataEnderecamento p');
@@ -237,8 +233,8 @@ cartas.forEach(carta => carta.addEventListener('click', function(e) {
               medical_specialty: Medico.medical_specialty,
               address: Medico.address,
               appointment: {
-                data: appointmentTextFirstPart, 
-                time: appointmentTextSecondPart
+                data: diaMesFinal, 
+                time: timeDay
               }
           };
         } else {

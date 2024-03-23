@@ -4,13 +4,13 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
-    height: 790px;
+    height: 600px;
     overflow-y: auto; 
     overflow-x: hidden; 
     scrollbar-color: #FFFFFF transparent; 
 }
 .title-appointment-page{
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 26px;
 }
 #appointments-container{
@@ -30,7 +30,7 @@
     align-items: center;
     background-color: #FFFFFF;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 .container-my-appointments{
     display: flex;
@@ -117,7 +117,6 @@
     align-items: center;
 }
 .ModalReagendar{
-    
     position: fixed;
     top: 0;
     left: 0;
@@ -131,6 +130,20 @@
 .off{
     display: none;
 }
+
+.ModalReagendamento{
+    background-color: #fff;
+    border-radius: 20px;
+    width: 70%;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .Modal{
     background-color: #fff;
     border-radius: 20px;
@@ -151,19 +164,24 @@
 }
 
 .titleAppointmentModal{
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 500;
     margin-top: 4em;
 }
-
+.titleAppointmentModalReagendar{
+    font-size: 25px;
+    font-weight: 500;
+}
 .subtitleAppointmentModal{
     font-size: 15px;
     font-weight: 400;
+    width: 50%;
+    text-align: center;
 }
 
 .buttonsModal{
     display: flex;
-    width: 35%;
+    width: 42%;
     justify-content: space-around;
     margin-bottom: 4em;
     margin-top: 1em;
@@ -204,7 +222,7 @@
  .buttonConfirmar{
     border: 1px solid #040404;
     cursor: pointer;
-    background: #fff;
+    background: rgb(255, 255, 255);
     padding: 0.4em 3em;
     border-radius: 10px;
     font-size: 20px;
@@ -214,46 +232,59 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2em;
-    background-color: #a7e3e346;
+    background-color: rgba(190, 231, 249, 0.3);
     border-radius: 20px;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    width: 70%;
  }
+
 .agendar{
-    width: 80%;
-    padding: 2em;
-   
-    
-    
+    width: 87%;
+    padding: 2em 2em 1em 1em;
 }
 
- .datas{
-    
+ .datasReagendamento{
     display: flex;
-    gap: 5em;
+    gap: 2em;
     overflow-x: hidden;
     white-space: nowrap;
-    
+    padding: 0 1em;
+    width: 100%;
 }
-.datas div{
-    
+.datasReagendamento div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-
-.datas h5{
+.datasReagendamento h5{
     text-align: center;
 }
-.datas p{
-    padding: 0 5px;
+.datasReagendamento p{
     width: 100%;
     
 }
-.datas p:hover{
-    border-radius: 20px;
-    background-color: #A7E3E3;
+.datasReagendamento p:hover{
+    border-radius: 5px;
+    background-color: #FF725E;
+    padding: 0.2em 0.3em;
+}
+.appointmentDayText{
+    font-size: 11px;
+    font-weight: 400;
+}
+.appointmentDay{
+    font-size: 13px;
+    font-weight: 600;
+}
+.appointmentTime{
+    font-size: 12px;
+    font-weight: 400;
+}
+.marginTime{
+    margin-top: 10px;
 }
 .removido{
     display: none;
@@ -261,4 +292,16 @@
 .iconClose{
     align-self: flex-end;
     cursor: pointer;
+}
+.iconCloseReagendar{
+    align-self: flex-end;
+    cursor: pointer;
+}
+.date-item-reschedule{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
 }
