@@ -6,14 +6,14 @@ const appointmentList = JSON.parse(dadosConsulta);
 
 // saving data in a json file
 function postData(novoConsulta) {
+  
     appointmentList.push(novoConsulta);
-   console.log('chegou no routes data',appointmentList);
     const data = JSON.stringify(appointmentList, null, 2);
     fs.writeFileSync('appointmentList.json', data, (err) => {
         if (err) throw err;
         console.log('Data written to file');
     });
-  }
+}
 
   // function put data 
   function putData(idConsulta, appointmentInput) {
@@ -31,7 +31,6 @@ function postData(novoConsulta) {
 
   // function delete data
   function deleteData(idConsulta) {
-    console.log(idConsulta);
     appointmentList.forEach((consulta) => {
       console.log(consulta.id === idConsulta, consulta.deleted === false);
       if (consulta.id === idConsulta && consulta.deleted === false) {

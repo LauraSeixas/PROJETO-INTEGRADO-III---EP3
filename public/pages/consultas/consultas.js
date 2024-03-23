@@ -168,6 +168,7 @@ async function getData() {
                         })
                         .then(data => {
                             console.log(data);
+                            alert('Consulta reagendada com sucesso!');
                         })
                         .catch(error => {
                             console.error('Erro ao realizar a requisição:', error);
@@ -196,6 +197,7 @@ async function deleteData(id) {
         });
         const data = await response.json();
         console.log(data);
+        alert('Consulta cancelada com sucesso!');
     } catch (error) {
         console.log(error);
     }

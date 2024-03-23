@@ -1,57 +1,46 @@
 [
   {
-    "id": "2ee5fecc-eae6-4b46-bc67-b8975d1f8108",
-    "name": "Sicrana das Palmeiras",
-    "medical_specialty": "Psiquiatra",
-    "address": "Avenida das Palmeiras, 456, Rio de Janeiro",
-    "appointment": {
-      "data": "20 de Março de 2024",
-      "time": "10:00, Quarta-feira"
-    },
-    "deleted": true
-  },
-  {
-    "id": "88d88d56-3d39-490c-802d-871750fc2723",
-    "name": "Fulana dos Girassóis",
-    "medical_specialty": "Psiquiatra",
-    "address": "Avenida dos Girassóis, 321, Salvador",
-    "deleted": true,
-    "appointment": {
-      "data": "22 de Março de 2024",
-      "time": "08:00, Sexta-feira"
-    }
-  },
-  {
-    "id": "233e8f2a-86cd-4e10-9aa2-fb3d9ea1773a",
-    "name": "Beltrano das Acácias",
-    "medical_specialty": "Psiquiatra",
-    "address": "Avenida das Acácias, 852, Curitiba",
-    "deleted": true,
-    "appointment": {
-      "data": "25 de Março\n de 2024",
-      "time": "10:00, Segunda-feira"
-    }
-  },
-  {
-    "id": "de0b7095-8fcf-451e-bbd6-f44ca3461f30",
-    "name": "Fulana das Oliveiras",
+    "id": "8d2ce944-d286-4b4d-b421-e9f52b4c4964",
+    "name": "Ana das Oliveiras",
     "medical_specialty": "Psiquiatra",
     "address": "Avenida República do Líbano 251, Recife",
     "deleted": false,
     "appointment": {
-      "data": "27 de Março\n de 2024",
-      "time": "10:00, Quarta-feira"
+      "data": "24 de Março\n de 2024",
+      "time": "10:00, Domingo"
     }
   },
   {
-    "id": "15be3458-ddd6-4179-ab4d-d9e1634a6dc8",
-    "name": "Beltrano das Acácias",
+    "id": "7f3d7bd8-d408-4ee0-93b1-0b61fcfa0ca2",
+    "name": "João das Flores",
     "medical_specialty": "Psiquiatra",
-    "address": "Avenida das Acácias, 852, Curitiba",
-    "deleted": true,
+    "address": "Rua das Flores, 123, São Paulo",
+    "deleted": false,
     "appointment": {
-      "data": "25 de Março de 2024",
-      "time": "08:00, Segunda-feira"
+      "data": "26 de Março\n de 2024",
+      "time": "10:00, Terça-feira"
+    }
+  },
+  {
+    "id": "a34cc166-5a43-416b-ac8e-a2697fe1619b",
+    "name": "Noel dos Ipês",
+    "medical_specialty": "Psiquiatra",
+    "address": "Rua das Gaivotas, 567, Florianópolis",
+    "deleted": false,
+    "appointment": {
+      "data": "27 de Março\n de 2024",
+      "time": "8:00, Quarta-feira"
+    }
+  },
+  {
+    "id": "84034112-aa73-4e6f-8250-a1dec3953287",
+    "name": "Joana das Orquídeas",
+    "medical_specialty": "Psiquiatra",
+    "address": "Avenida das Flores, 987, Goiânia",
+    "deleted": false,
+    "appointment": {
+      "data": "28 de Março\n de 2024",
+      "time": "8:00, Quinta-feira"
     }
   }
 ]
