@@ -5,7 +5,7 @@
     "medical_specialty": "Psiquiatra",
     "address": "Avenida das Palmeiras, 456, Rio de Janeiro",
     "appointment": {
-      "data": "20 de março de 2024",
+      "data": "20 de Março de 2024",
       "time": "10:00, Quarta-feira"
     },
     "deleted": true
@@ -15,9 +15,9 @@
     "name": "Fulana dos Girassóis",
     "medical_specialty": "Psiquiatra",
     "address": "Avenida dos Girassóis, 321, Salvador",
-    "deleted": false,
+    "deleted": true,
     "appointment": {
-      "data": "22 de março de 2024",
+      "data": "22 de Março de 2024",
       "time": "08:00, Sexta-feira"
     }
   },
@@ -26,10 +26,10 @@
     "name": "Beltrano das Acácias",
     "medical_specialty": "Psiquiatra",
     "address": "Avenida das Acácias, 852, Curitiba",
-    "deleted": false,
+    "deleted": true,
     "appointment": {
-      "data": "21 de março de 2024",
-      "time": "08:00, Quinta-feira"
+      "data": "25 de Março\n de 2024",
+      "time": "10:00, Segunda-feira"
     }
   },
   {
@@ -39,8 +39,8 @@
     "address": "Avenida República do Líbano 251, Recife",
     "deleted": false,
     "appointment": {
-      "data": "20 de março de 2024",
-      "time": "08:00, Quarta-feira"
+      "data": "27 de Março\n de 2024",
+      "time": "10:00, Quarta-feira"
     }
   },
   {
@@ -48,9 +48,9 @@
     "name": "Beltrano das Acácias",
     "medical_specialty": "Psiquiatra",
     "address": "Avenida das Acácias, 852, Curitiba",
-    "deleted": false,
+    "deleted": true,
     "appointment": {
-      "data": "25 de março de 2024",
+      "data": "25 de Março de 2024",
       "time": "08:00, Segunda-feira"
     }
   }

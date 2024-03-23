@@ -1,5 +1,5 @@
 let numAppointments = [];
-
+//datasReagendamento
 async function getData() {
     try {
         const response = await fetch('http://localhost:3000/api');
@@ -7,7 +7,7 @@ async function getData() {
         const data = await response.json();
 
         numAppointments = Object.values(data);
-        console.log(numAppointments)
+        
         createAppointmentsHTML();
              // Selecionando elementos do DOM após os dados terem sido obtidos
             const ModalCancelar = document.querySelector('.ModalCancelar');
@@ -15,26 +15,27 @@ async function getData() {
             const btnreschedule = document.querySelectorAll('.btn-reschedule');
             const buttonCancelar = document.querySelector('.buttonCancelar');
             const buttonIconClose = document.querySelector('.iconClose');
+            const buttonIconCloseReagendar = document.querySelector('.iconCloseReagendar');
             const buttonSair =document.querySelector('.buttonSair');
             const buttonCancelarAgenda = document.querySelector('.buttonCancelarAgenda');
             const buttonConfirmar = document.querySelector('.buttonConfirmar');
-            const btncancel = document.querySelectorAll(".btn-cancel")
+            const btncancel = document.querySelectorAll(".btn-cancel");
+            
             //botões para fechar o modal
             buttonSair.addEventListener("click", function() {
-                 console.log('cliquei');
                  ModalCancelar.classList.add("off");
                  ModalReagendar.classList.add("off");
              });
      
             buttonCancelar.addEventListener("click", function() {
-                 console.log('cliquei');
                  ModalCancelar.classList.add("off");
                  ModalReagendar.classList.add("off");
              });
 
             buttonIconClose.addEventListener("click", function() {
-                console.log('cliquei');
                 ModalCancelar.classList.add("off");
+            });
+            buttonIconCloseReagendar.addEventListener("click", function() {
                 ModalReagendar.classList.add("off");
             });
             //fim dos botões para fechar o modal	
@@ -56,8 +57,7 @@ async function getData() {
                     })
                 })
                 //fim dos botões para abrir o modal
-
-                //
+                
                 box.addEventListener('click',function(e){
                     buttonCancelarAgenda.addEventListener("click",function(){
                         ModalCancelar.classList.add("off")
@@ -68,33 +68,110 @@ async function getData() {
 
                     let horario =''
                     let dia =''
-                    console.log(box)
+                    let diaMes =''
+
+                    const daysOfWeek = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+                    const currentDate = new Date();
+                
+                    // Encontra a div de datas específica para este médico
+                    const datasContainer = document.querySelector('.datasReagendamento');
+                    const setaContainer = document.querySelector('#seta');
+                    if (!datasContainer) {
+                        return;
+                    }
+                    datasContainer.innerHTML = '';
+                    // Renderiza 6 dias
+                    for (let i = 0; i < 6; i++) {
+                        const date = new Date();
+                        date.setDate(currentDate.getDate() + i);
+                    
+                        const day = daysOfWeek[date.getDay()];
+                        const dayOfMonth = date.getDate();
+                        const fullMonthName = new Date().toLocaleString('default', { month: 'long' });
+                        const month = fullMonthName.replace(/^\w/, (c) => c.toUpperCase());
+
+                        const div = document.createElement('div');
+                        div.classList.add('date-item-reschedule');
+                        div.innerHTML = `
+                            <h5 class="appointmentDay">${day}</h5>
+                            <span class="appointmentDayText">${dayOfMonth} de ${month}<span>
+                            <p class="appointmentTime marginTime">8:00</p>
+                            <p class="appointmentTime">10:00</p>
+                        `;
+                    
+                        datasContainer.appendChild(div);
+                    }
+
+                    setaContainer.innerHTML = '';
+                    
+                    const setaImg = document.createElement('img');
+                    
+                    setaImg.src = '/public/assets/setaRight.png';
+                    setaImg.alt = 'seta';
+                    setaContainer.appendChild(setaImg); 
+                    
+                    setaContainer.addEventListener('click', function () {
+                        const proximoDiaVisivel = datasContainer.querySelector('.date-item-reschedule:not([style*="display: none"])');
+                        const posicaoProximoDiaVisivel = proximoDiaVisivel.offsetLeft;
+                        
+                        datasContainer.scrollTo({
+                            left: posicaoProximoDiaVisivel,
+                            behavior: 'smooth'
+                        });
+                    });
+                    
+                    let dataToBeUpdated= {}
+
                     ModalReagendar.addEventListener('click',function(e){
                         
                         if (e.target.tagName === 'P' && e.target.textContent !== '----') {
-                            let todosHorarios = document.querySelectorAll('.ModalReagendar p');
+                            let todosHorarios = document.querySelectorAll('.ModalReagendar .datasReagendamento p');
                             todosHorarios.forEach(function(horario) {
                                 horario.style.backgroundColor = ''; // Remove a cor de fundo
                                 horario.style.borderRadius = ''; // Remove o border-radius
                             });
-                            console.log(todosHorarios)
-                            e.target.style.backgroundColor = '#A7E3E3'
-                            e.target.style.borderRadius = '20px'
+                            e.target.style.backgroundColor = '#FF725E'
+                            e.target.style.borderRadius = '5px'
                             horario = e.target.textContent;
-                            console.log(dia)
-                            dia = e.target.parentNode.querySelector('h5').textContent;
-                            
-                            
+                            const container = e.target.closest('.date-item-reschedule');
+                            dia = container.querySelector('.appointmentDay').textContent;
+                            diaMes = container.querySelector('.appointmentDayText').textContent;
+                            const diaMesText = diaMes.trim(); // Remover espaços em branco extras
+                            const partes = diaMesText.split(' '); // Dividir a string em partes com base no espaço em branco
+                            const date = new Date();
+                            const year = date.getFullYear();
+                            const diaMesFinal = partes[0] + ' ' + partes[1] + ' ' + partes[2] + ' de ' + year; // Pegar apenas o dia e o mês
+                            const timeDay = horario + ', ' +  dia;
+
+                            dataToBeUpdated = {
+                                appointment: {
+                                    data: diaMesFinal,
+                                    time: timeDay
+                                }
+                            }
                         }
 
                     })
 
                     buttonConfirmar.addEventListener('click', function(){
-                        const appointmentDetails = box.querySelector('.container-detail-appointments');
-                        const dateElement = appointmentDetails.querySelector('.subtitle-detail-appointment:nth-child(2)');
-                        const timeElement = appointmentDetails.querySelector('.subtitle-detail-appointment:nth-child(3)');
-                        dateElement.textContent =dia;
-                        timeElement.textContent= horario;
+                        const idToBeUpdated = box.getAttribute('key');
+                        const url = 'http://localhost:3000/api/' + idToBeUpdated;
+                        fetch(url, {
+                            method: 'PUT',
+                            body: JSON.stringify(dataToBeUpdated),
+                            headers: {
+                                'Content-Type': 'application/json'
+                            }
+                        })
+                        .then(response => {
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log(data);
+                        })
+                        .catch(error => {
+                            console.error('Erro ao realizar a requisição:', error);
+                        });
                         ModalCancelar.classList.add("off")
                         ModalReagendar.classList.add("off")
                     })
@@ -171,30 +248,5 @@ function createAppointmentsHTML() {
         appointmentsContainer.innerHTML += appointmentHTML;
     });
 }
-
-// const seta = document.querySelector("#seta")
-
-// seta.addEventListener('click', function () {
-//     var ultimoDia = document.querySelector('.datas div:last-child');
-//     var datas = document.querySelector('.datas');
-//     var posicaoUltimoDia = ultimoDia.offsetLeft;
-    
-    
-//     if (datas.scrollLeft + datas.clientWidth >= datas.scrollWidth) {
-        
-//         datas.scrollTo({
-//             left: 0,
-//             behavior: 'smooth'
-//         });
-//     } else {
-        
-//         datas.scrollTo({
-//             left: posicaoUltimoDia,
-//             behavior: 'smooth'
-//         });
-//     }
-// });
-
-
 
 
