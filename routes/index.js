@@ -24,7 +24,7 @@ routes.get('/api', (req, res) => {
 
 //adicionar dados
 routes.post('/api', (req, res) => {
-    console.log('routes.post',req.body);
+
     const { name, medical_specialty, address, appointment } = req.body;
     
     novaConsulta.id = id;

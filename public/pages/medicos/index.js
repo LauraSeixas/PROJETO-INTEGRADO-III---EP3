@@ -1,13 +1,13 @@
 const Medicos = [
     {
       "id": "1c497186-be9c-4b1d-b055-bcf0110cd7f4",
-      "name": "Fulana das Oliveiras",
+      "name": "Ana das Oliveiras",
       "medical_specialty": "Psiquiatra",
       "address": "Avenida República do Líbano 251, Recife"
     },
     {
       "id": "d336a9bb-6052-44ad-a1b8-5f279419c900",
-      "name": "Beltrana das Flores",
+      "name": "João das Flores",
       "medical_specialty": "Psiquiatra",
       "address": "Rua das Flores, 123, São Paulo"
     },
@@ -19,7 +19,7 @@ const Medicos = [
     },
     {
       "id": "d7c41a57-4a46-4fc5-91f5-313eeff362fe",
-      "name": "Fulano dos Pinheiros",
+      "name": "José dos Pinheiros",
       "medical_specialty": "Psiquiatra",
       "address": "Rua dos Pinheiros, 789, Belo Horizonte"
     },
@@ -31,7 +31,7 @@ const Medicos = [
     },
     {
       "id": "6b184d8e-f914-4b69-bb72-c75cd1b4e335",
-      "name": "Sicrano dos Ipês",
+      "name": "Noel dos Ipês",
       "medical_specialty": "Psiquiatra",
       "address": "Rua das Gaivotas, 567, Florianópolis"
     },
@@ -43,25 +43,25 @@ const Medicos = [
     },
     {
       "id": "47f833ce-79d9-44a3-a6c3-bc7a4469ba54",
-      "name": "Beltrana das Margaridas",
+      "name": "Maria das Margaridas",
       "medical_specialty": "Psiquiatra",
       "address": "Rua das Mangueiras, 654, Porto Alegre"
     },
     {
       "id": "160efd96-10c8-41e6-b978-e96f7511b9dc",
-      "name": "Sicrana das Orquídeas",
+      "name": "Joana das Orquídeas",
       "medical_specialty": "Psiquiatra",
       "address": "Avenida das Flores, 987, Goiânia"
     },
     {
       "id": "0e414416-4d09-42e8-a68d-99f88cd3cc05",
-      "name": "Fulano dos Lírios",
+      "name": "Davi dos Lírios",
       "medical_specialty": "Psiquiatra",
       "address": "Rua dos Ipês, 741, Manaus"
     },
     {
       "id": "1349155c-3dbd-44f2-98a7-666b089615b0",
-      "name": "Beltrano das Acácias",
+      "name": "Elias das Acácias",
       "medical_specialty": "Psiquiatra",
       "address": "Avenida das Acácias, 852, Curitiba"
     }
@@ -237,6 +237,7 @@ cartas.forEach(carta => carta.addEventListener('click', function(e) {
                 time: timeDay
               }
           };
+       
         } else {
             console.error('Médico não encontrado');
         }
@@ -251,10 +252,28 @@ buttonClose.addEventListener('click',function(){
     modalAgendar.classList.add('off')
 });
 
-const buttonConfirmar = document.querySelector('.buttonConfirmar');
+const buttonPostConfirmarAgendamento = document.querySelector('.buttonConfirmar');
 
-buttonConfirmar.addEventListener('click', function() {
-  sendData(dataToBeSent);
+buttonPostConfirmarAgendamento.addEventListener('click', function() {
+    postData(dataToBeSent);
 });
 
-function sendData(dataToBeSent) {};
+async function postData(dataToBeSent) {
+  const url = 'http://localhost:3000/api/' ;
+  console.log('data que está chegando', dataToBeSent)
+  try {
+      const response = await fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(dataToBeSent),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+      });
+      const data = await response.json();
+      console.log('dataToBeSent: ', data);
+      window.location.href = 'http://localhost:5500/public/pages/consultas/consultas.html'; 
+      alert('Consulta agendada com sucesso!');
+  } catch (error) {
+      console.log(error);
+  }
+};
