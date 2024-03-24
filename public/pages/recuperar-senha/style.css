@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#botaoHome {
+    width: 1280;
+    height: 99;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin-top: 62px;
+    margin-right: 80px;
+    margin-left: 80px;
+    border: none;
+    border-radius: 20px;
+    background-color: #C8DEFB;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#insira {
+    margin-top: 105px;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#voce {
+    font-size: 15px;
+    text-align: center;
+}
+
+#form {
+    text-align: center;
+    font-size: 14px;
+}
+
+#text_email {
+    text-align: left;
+}
+
+#botaoEnviar {
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 4px 0 #ccc;
+    width: 530px;
+    height: 38px;
+    background-color: #C8DEFB;
+}
+
+#hrStyle {
+    width: 525px;
+    text-align: center;
+}
+
+#ainda {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 17px;
+}
