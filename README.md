@@ -38,7 +38,10 @@ http://localhost:5500
 ```
 ### 5. Screenshots da Aplicação
 
-![Página Home](/public/assets/home.png)
+![Página Home](/public/assets/homeInicial.png)
+![Página Login](/public/assets/login.png)
+![Página Cadastro](/public/assets/cadastro.png)
+![Página Recuperar a senha](/public/assets/recuperarSenha.png)
 ![Página com as opções de médicos](/public/assets/medicos.png)
 ![Modal de agendamento de consulta](/public/assets/modalAgendamento.png)
 ![Página com das consultas agendadas](/public/assets/consultas.png)
