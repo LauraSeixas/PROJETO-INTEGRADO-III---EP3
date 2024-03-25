@@ -18,30 +18,30 @@
   width: 40%;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1.5em;
   margin-top: 1em;
 }
 .Textarea{
   display: flex;
   flex-direction: column;
-  margin: 1px;
 }
-
 .input{
-padding: 6px;
-border-radius: 10px;
+  padding: .6em;
+  border-radius: 5px;
+  border: 2px solid #CCCCCC;
 }
 .submitForms{
   background-color: #C8DEFB;
   border: none;
   padding: .5em ;
-  border-radius: 10px;
-  box-shadow: 0 4px 5px #0000007a;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  font-size: 13px;
+  font-size: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
 }
 .divisao {
   margin-top: 2em;
@@ -50,19 +50,18 @@ border-radius: 10px;
   align-items: center;
   width: 40%;
   gap: 2em;
-  padding-top: 10px;
-  padding-bottom: 15px;
+  margin-bottom: 1em;
 }
 .linha {
-
   width: 50%; /* Ajuste a largura do traço conforme necessário */
   height: 1px; /* Ajuste a altura do traço conforme necessário */
-  background-color: rgba(56, 56, 56, 0.63); /* Cor do traço */
+  background-color: #D9D9D9; /* Cor do traço */
 }
+
 .DivButtons{
-  margin-top: 2em;
+  margin-top: 1.5em;
   width: 40%;
-  gap: 2em;
+  gap: 1.5em;
   display: flex;
   flex-direction: column;
 }
@@ -70,12 +69,13 @@ border-radius: 10px;
 .buttonCadastro{
   border: none;
   background-color: #FFFFFF;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
   padding: .5em;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2em;
   cursor: pointer;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
