@@ -34,16 +34,24 @@ Este comando iniciará o servidor Node.js que servirá a aplicação.
 ### 4. Acessando a Aplicação
 Uma vez que o servidor estiver rodando, você poderá acessar a aplicação em seu navegador, digitando o seguinte endereço:
 ```bash
-http://localhost:5500
+http://localhost:5500/public/pages/home-inicial/home.html
 ```
 ### 5. Screenshots da Aplicação
-
+#### Home
 ![Página Home](/public/assets/homeInicial.png)
+#### Login
 ![Página Login](/public/assets/login.png)
+#### Cadastro
 ![Página Cadastro](/public/assets/cadastro.png)
+#### Recuperar a senha
 ![Página Recuperar a senha](/public/assets/recuperarSenha.png)
+#### Médicos disponíveis
 ![Página com as opções de médicos](/public/assets/medicos.png)
+#### Modal de agendamento de consulta
 ![Modal de agendamento de consulta](/public/assets/modalAgendamento.png)
+#### Minhas consultas
 ![Página com das consultas agendadas](/public/assets/consultas.png)
+#### Modal de reagendamento de consulta
 ![Modal de reagendamento de consulta](/public/assets/modalReagendamento.png)
+#### Modal de cancelamento de consulta
 ![Modal de cancelamento de consulta](/public/assets/modalCancelamento.png)
